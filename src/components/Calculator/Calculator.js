@@ -1,45 +1,55 @@
 import React from 'react';
 import './Calculator.css';
+import CalcButton from '../CalcButton/CalcButton';
 import calculate from '../../logic/calculate';
-import operate from '../../logic/operate';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class Calculator extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  onClickHandler = (e) => {
+    const result = calculate(this.state, e.target.textContent);
+    this.setState(result);
+  }
+
   render() {
+    const { next, total } = this.state;
     return (
       <table className="calculator">
         <tbody>
           <tr>
-            <th colSpan="4" className="th-result"><p className="calculator-result">0</p></th>
+            <th colSpan="4" className="th-result"><p className="calculator-result">{ next ?? total ?? 0 }</p></th>
           </tr>
           <tr>
-            <th className="w-25"><button type="button" className="btn-Gray">AC</button></th>
-            <th className="w-25"><button type="button" className="btn-Gray">+/-</button></th>
-            <th className="w-25"><button type="button" className="btn-Gray">%</button></th>
-            <th className="w-25"><button type="button" className="btn-Orange">÷</button></th>
+            <th className="w-25"><CalcButton className="btn-Gray" name="AC" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th className="w-25"><CalcButton className="btn-Gray" name="+/-" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th className="w-25"><CalcButton className="btn-Gray" name="%" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th className="w-25"><CalcButton className="btn-Orange" name="÷" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
           </tr>
           <tr>
-            <th><button type="button" className="btn-Gray">7</button></th>
-            <th><button type="button" className="btn-Gray">8</button></th>
-            <th><button type="button" className="btn-Gray">9</button></th>
-            <th><button type="button" className="btn-Orange">x</button></th>
+            <th><CalcButton className="btn-Gray" name="7" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Gray" name="8" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Gray" name="9" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Orange" name="x" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
           </tr>
           <tr>
-            <th><button type="button" className="btn-Gray">4</button></th>
-            <th><button type="button" className="btn-Gray">5</button></th>
-            <th><button type="button" className="btn-Gray">6</button></th>
-            <th><button type="button" className="btn-Orange">+</button></th>
+            <th><CalcButton className="btn-Gray" name="4" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Gray" name="5" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Gray" name="6" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Orange" name="+" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
           </tr>
           <tr>
-            <th><button type="button" className="btn-Gray">1</button></th>
-            <th><button type="button" className="btn-Gray">2</button></th>
-            <th><button type="button" className="btn-Gray">3</button></th>
-            <th><button type="button" className="btn-Orange">-</button></th>
+            <th><CalcButton className="btn-Gray" name="1" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Gray" name="2" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Gray" name="3" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Orange" name="-" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
           </tr>
           <tr>
-            <th colSpan="2"><button type="button" className="btn-Gray">0</button></th>
-            <th><button type="button" className="btn-Gray">.</button></th>
-            <th><button type="button" className="btn-Orange">=</button></th>
+            <th colSpan="2"><CalcButton className="btn-Gray" name="0" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Gray" name="." onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
+            <th><CalcButton className="btn-Orange" name="=" onClickHandler={this.onClickHandler} aria-label="Mute volume" /></th>
           </tr>
         </tbody>
       </table>
