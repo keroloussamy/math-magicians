@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://keroloussamy.github.io/Leaderboard/dist/)
+[Live Demo Link](https://keroloussamy.github.io/math-magicians/)
 
 
 ## Getting Started
@@ -23,10 +23,11 @@ To get a local copy up and running follow these simple example steps.
 
 - Click on the top right green "code" button.
 - On the dropdown menu, choose "download with zip" button.
-- After download, extract the zip file and you have the project running on your machine.
+- After download, extract the zip file and you have the project on your machine.
+- After downloading run `npm i` to install all Node packages.
+- Run `npm start` to run the project.
 
-
-## Authors
+## Author
 
 👤 **Kerolous Samy**
 
