@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple example steps.
 - After downloading run `npm i` to install all Node packages.
 - Run `npm start` to run the project.
 
-## Authors
+## Author
 
 👤 **Kerolous Samy**
 
