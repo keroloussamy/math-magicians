@@ -1,0 +1,11 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 40px;
+  background-color: gainsboro;
+}
+
+.nav-header {
+  font-size: 35px;
+}

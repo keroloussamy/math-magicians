@@ -14,9 +14,8 @@
 }
 
 .calculator {
-  margin-top: 10vh;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 80px;
   background-color: #858693;
   width: 30%;
   min-width: 300px;
@@ -40,4 +39,13 @@ td {
 
 .w-25 {
   width: 25%;
+}
+
+.calculator-container {
+  margin-top: 10px;
+  display: flex;
+}
+
+.calculator-container h2 {
+  padding-left: 80px;
 }
