@@ -1,0 +1,10 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 40px;
+}
+
+.nav-header {
+  font-size: 35px;
+}
