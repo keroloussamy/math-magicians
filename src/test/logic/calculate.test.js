@@ -1,7 +1,6 @@
-import calculate from '../../logic/calculate'
+import calculate from '../../logic/calculate';
 
 describe('my calculate', () => {
-
   test('calculate number', () => {
     expect(calculate({}, '9')).toStrictEqual({ next: '9', total: null });
   });
@@ -17,4 +16,4 @@ describe('my calculate', () => {
   test('calculate  5*6=30', () => {
     expect(calculate({ total: '5', next: '6', operation: 'x' }, '=')).toStrictEqual({ total: '30', next: null, operation: null });
   });
-})
+});
