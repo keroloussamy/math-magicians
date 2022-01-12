@@ -7,9 +7,7 @@ const Calculator = () => {
   const [state, setState] = useState({});
 
   const onClickHandlerFun = (e) => {
-    console.log(state, e.target.textContent);
     const result = calculate(state, e.target.textContent);
-    console.log(result);
     setState(result);
   };
 
