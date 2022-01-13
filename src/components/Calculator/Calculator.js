@@ -18,7 +18,7 @@ const Calculator = () => {
       <table className="calculator">
         <tbody>
           <tr>
-            <th colSpan="4" className="th-result"><p className="calculator-result">{next ?? total ?? 0}</p></th>
+            <th colSpan="4" className="th-result"><p className="calculator-result" data-testid="result">{next ?? total ?? 0}</p></th>
           </tr>
           <tr>
             <th className="w-25"><CalcButton className="btn-Gray" name="AC" onClickHandler={onClickHandlerFun} aria-label="Mute volume" /></th>
