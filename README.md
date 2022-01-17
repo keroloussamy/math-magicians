@@ -17,6 +17,9 @@
 
 [Live Demo Link](https://keroloussamy.github.io/math-magicians/)
 
+[Live Demo On Heroku](https://math-magicians-ks.herokuapp.com/math-magicians/)
+
+[Live Demo On Netlify](https://math-madicians.netlify.app/)
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
